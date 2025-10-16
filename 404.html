@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 陈默创作实验室</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 导航 -->
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">返回首页</a>
+        </nav>
+
+        <!-- 主要错误信息 -->
+        <main class="error-content">
+            <div class="error-code">
+                <span class="number">4</span>
+                <span class="number zero">0</span>
+                <span class="number">4</span>
+            </div>
+            
+            <h1>页面未找到</h1>
+            <p class="error-message">您寻找的页面似乎消失了，就像某些记忆...</p>
+            
+            <!-- 主要线索区域 -->
+            <div class="clue-section">
+                <div class="typewriter-text" id="secretMessage">
+                    <p>有时候，消失的东西比存在的东西更重要。</p>
+                    <p>就像这个故事里，真正重要的不是发生了什么，</p>
+                    <p>而是<strong>为什么</strong>会发生。</p>
+                </div>
+                
+                <div class="hidden-clues">
+                    <!-- 线索1：时间循环提示 -->
+                    <div class="clue" id="timeClue">
+                        <h3>时间异常检测</h3>
+                        <p>系统检测到时间戳异常：<span id="timestamp">2024-03-15 02:30</span></p>
+                        <p>循环次数：<span id="loopCount">47</span></p>
+                    </div>
+                    
+                    <!-- 线索2：密码提示 -->
+                    <div class="clue" id="passwordClue">
+                        <h3>访问提示</h3>
+                        <p>某些页面需要特定的"钥匙"才能访问。</p>
+                        <p>试试在URL后添加：<code>?access=researcher</code></p>
+                    </div>
+                    
+                    <!-- 线索3：控制台提示 -->
+                    <div class="clue" id="consoleClue">
+                        <h3>开发者提示</h3>
+                        <p>有时候，真相隐藏在控制台之中。</p>
+                        <p>按F12打开开发者工具，查看控制台信息。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 互动元素 -->
+            <div class="interactive-section">
+                <button class="mystery-btn" onclick="revealMoreClues()">揭示更多线索</button>
+                <button class="mystery-btn" onclick="checkTimeLoop()">检查时间异常</button>
+                <button class="mystery-btn" onclick="accessSecretLab()">尝试访问秘密实验室</button>
+            </div>
+
+            <!-- 隐藏的跳转链接 -->
+            <div class="secret-links" id="secretLinks" style="display: none;">
+                <h4>隐藏入口</h4>
+                <ul>
+                    <li><a href="secret/time-loop-records/cycle-1.html" class="secret-link">时间循环记录 - 第1次</a></li>
+                    <li><a href="lab/experiment-records/reality-immersion.html?access=researcher" class="secret-link">现实沉浸实验记录</a></li>
+                    <li><a href="research/criminal-psychology/offender-profiles.html#hidden" class="secret-link">犯罪者心理画像（完整版）</a></li>
+                </ul>
+            </div>
+
+            <!-- 彩蛋：镜子效果 -->
+            <div class="mirror-effect" id="mirrorEffect">
+                <p>镜子中的文字：<span class="mirror-text">提警：间时常异测检</span></p>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="error-footer">
+            <p>&copy; 2024 陈默创作实验室 · <a href="index.html">返回安全区域</a></p>
+        </footer>
+    </div>
+
+    <script src="js/404.js"></script>
+</body>
+</html>
