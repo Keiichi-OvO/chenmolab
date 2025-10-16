@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>研究资料 - 陈默创作实验室</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/research.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">首页</a> > 研究资料
+        </nav>
+        
+        <header class="page-header">
+            <h1>研究资料</h1>
+            <p>为《完美犯罪》进行的深度研究与理论探索</p>
+        </header>
+
+        <div class="research-categories">
+            <div class="category-card">
+                <h2><a href="criminal-psychology/index.html">犯罪心理学</a></h2>
+                <p>深入探讨犯罪者的心理动机、行为模式和道德边界</p>
+                <ul class="topic-list">
+                    <li><a href="criminal-psychology/offender-profiles.html">犯罪者心理画像</a></li>
+                    <li><a href="criminal-psychology/motive-analysis.html">犯罪动机分析</a></li>
+                    <li><a href="criminal-psychology/ethical-dilemmas.html">道德困境研究</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h2><a href="timeline-analysis/index.html">时间线分析</a></h2>
+                <p>时间循环理论、行为模式分析和因果关系研究</p>
+                <ul class="topic-list">
+                    <li><a href="timeline-analysis/time-loop-theory.html">时间循环理论</a></li>
+                    <li><a href="timeline-analysis/behavior-patterns.html">行为模式分析</a></li>
+                    <li><a href="timeline-analysis/causality-study.html">因果关系研究</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h2><a href="field-observation/index.html">实地观察</a></h2>
+                <p>为追求创作真实感进行的实地考察和人物观察</p>
+                <ul class="topic-list">
+                    <li><a href="field-observation/urban-exploration.html">城市探索记录</a></li>
+                    <li><a href="field-observation/human-behavior.html">人类行为观察</a></li>
+                    <li><a href="field-observation/ethical-boundaries.html">道德边界测试</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 隐藏线索 -->
+        <div style="display: none;" id="research-notes">
+            <p>观察对象：李明，年龄35岁，居住朝阳区某小区</p>
+            <p>作息规律：22:30睡觉，06:30起床</p>
+            <p>特殊习惯：每晚给女儿读睡前故事</p>
+            <!-- 更多隐藏内容通过JavaScript解锁 -->
+        </div>
+
+        <script>
+            // 研究资料页面特殊功能
+            document.addEventListener('DOMContentLoaded', function() {
+                // 在控制台输出研究进度
+                console.log('%c研究资料库加载完成', 'color: #2f4f4f; font-weight: bold;');
+                console.log('当前研究进度：67%');
+                console.log('剩余观察时间：3天');
+                
+                // 检测特定关键词显示隐藏内容
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('access') === 'researcher') {
+                    document.getElementById('research-notes').style.display = 'block';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

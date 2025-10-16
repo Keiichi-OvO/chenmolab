@@ -1,0 +1,228 @@
+/* 404页面专用样式 */
+.error-content {
+    text-align: center;
+    padding: 4rem 0;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.error-code .number {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.error-code .zero {
+    color: #8b0000;
+    animation-delay: 1s;
+}
+
+.error-code .number:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* 线索区域 */
+.clue-section {
+    background: rgba(139, 0, 0, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.typewriter-text {
+    font-family: 'Courier New', monospace;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.typewriter-text p {
+    margin: 1rem 0;
+    opacity: 0;
+    animation: typewriter 4s steps(40) forwards;
+}
+
+.typewriter-text p:nth-child(1) { animation-delay: 0.5s; }
+.typewriter-text p:nth-child(2) { animation-delay: 2s; }
+.typewriter-text p:nth-child(3) { animation-delay: 4s; }
+
+@keyframes typewriter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hidden-clues {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.clue {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #8b0000;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.clue:nth-child(1) { animation-delay: 6s; }
+.clue:nth-child(2) { animation-delay: 7s; }
+.clue:nth-child(3) { animation-delay: 8s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clue h3 {
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+}
+
+.clue code {
+    background: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #8b0000;
+}
+
+/* 互动按钮 */
+.interactive-section {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mystery-btn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.mystery-btn:hover {
+    background: #8b0000;
+    transform: translateY(-2px);
+}
+
+/* 秘密链接 */
+.secret-links {
+    background: rgba(42, 42, 42, 0.9);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.secret-links h4 {
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.secret-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.secret-links li {
+    margin: 0.5rem 0;
+}
+
+.secret-link {
+    color: #f8f8f8;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.secret-link:hover {
+    background: #8b0000;
+    color: white;
+}
+
+/* 镜子效果 */
+.mirror-effect {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    border-radius: 5px;
+    transform: scaleX(-1);
+}
+
+.mirror-text {
+    font-family: 'SimSun', serif;
+    color: #333;
+}
+
+/* 错误页脚 */
+.error-footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 2rem;
+}
+
+.error-footer a {
+    color: #8b0000;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 4rem;
+    }
+    
+    .interactive-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mystery-btn {
+        width: 200px;
+    }
+    
+    .clue-section {
+        padding: 1rem;
+    }
+}

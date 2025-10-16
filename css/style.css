@@ -1,0 +1,163 @@
+:root {
+    --ink-black: #1a1a1a;
+    --paper-white: #f8f8f8;
+    --blood-red: #8b0000;
+    --thought-blue: #2f4f4f;
+    --warning-orange: #d2691e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SimSun', '宋体', serif;
+    background-color: var(--paper-white);
+    color: var(--ink-black);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 基础链接样式 */
+a {
+    color: var(--ink-black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--blood-red);
+}
+
+/* 博客文章详细样式 */
+.blog-post.detailed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-meta {
+    color: #666;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.writing-excerpt {
+    border-left: 4px solid #8b0000;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+.writing-notes {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 4px solid #2f4f4f;
+}
+
+.post-tags {
+    margin: 2rem 0;
+}
+
+.tag {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* 研究论文样式 */
+.research-paper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.research-meta {
+    color: #8b0000;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.theory-point {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #2f4f4f;
+}
+
+.case-study {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.protected-data {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* 时间线可视化 */
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #8b0000;
+}
+
+.timeline-event {
+    position: relative;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    margin: 1rem 0;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #8b0000;
+}
+
+.timeline-event[data-current="true"]::before {
+    background: #27ae60;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* 秘密面包屑 */
+.secret-breadcrumb {
+    color: #8b0000;
+    font-weight: bold;
+}

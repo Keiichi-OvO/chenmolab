@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>第7章突破 - 创作日志</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../index.html">首页</a> > 
+            <a href="../index.html">创作日志</a> > 
+            第7章突破
+        </nav>
+
+        <article class="blog-post detailed">
+            <header>
+                <h1>《完美犯罪》第7章突破</h1>
+                <time datetime="2024-03-12">2024年3月12日</time>
+                <p class="post-meta">写作状态：关键时刻 · 情感投入度：极高</p>
+            </header>
+
+            <div class="post-content">
+                <p>今天写到了关键场景，主角在目标家外徘徊的心理描写。为了真实感，我不得不进行一些危险的探索...</p>
+                
+                <blockquote class="writing-excerpt">
+                    "他站在窗外，看着那个平凡的家庭。父亲在给女儿读故事，母亲在厨房忙碌。如此普通的幸福，却让他手中的刀变得无比沉重。"
+                </blockquote>
+
+                <p>这段描写耗费了我整整三个小时。我必须反复体验那种矛盾心理：艺术追求与道德底线的冲突。</p>
+
+                <!-- 隐藏线索：时间循环证据 -->
+                <div class="writing-notes" style="background: #f8f8f8; padding: 1rem; margin: 1rem 0; border-left: 3px solid #8b0000;">
+                    <h4>创作笔记（仅自己可见）</h4>
+                    <p><strong>观察记录：</strong>目标李明，22:30准时熄灯。女儿房间的灯光在21:45熄灭。</p>
+                    <p><strong>心理状态：</strong>越来越分不清自己在写小说还是在记录现实。</p>
+                    <p><strong>关键决定：</strong>明天必须做出选择 - 完成小说，或者...</p>
+                    
+                    <!-- 隐藏的时间戳 -->
+                    <div style="display: none;" id="cycle-info">
+                        <p>循环次数：47 | 当前时间线：3月12日 | 剩余时间：3天</p>
+                    </div>
+                </div>
+
+                <p>有时候我在想，如果角色知道作者的存在，他们会作何感想？如果作者开始活成角色的样子，又该如何自处？</p>
+            </div>
+
+            <footer class="post-footer">
+                <div class="post-tags">
+                    <span class="tag">创作困境</span>
+                    <span class="tag">道德边界</span>
+                    <span class="tag">心理描写</span>
+                </div>
+                
+                <!-- 导航到下一篇 -->
+                <div class="post-navigation">
+                    <a href="chapter-8-dilemma.html" class="nav-link">下一篇：第8章困境 →</a>
+                </div>
+            </footer>
+        </article>
+
+        <!-- 评论区域（隐藏线索） -->
+        <section class="comments-section">
+            <h3>读者反馈</h3>
+            <div class="comment">
+                <strong>读者A：</strong>
+                <p>陈老师这段描写太真实了，感觉就像在写自己的经历一样...</p>
+                <time>3月12日 20:15</time>
+            </div>
+            
+            <!-- 隐藏的"编辑"评论 -->
+            <div class="comment editor-comment" style="display: none;" id="editorComment">
+                <strong>编辑张明：</strong>
+                <p>陈默，你最近的状态让我很担心。这些文字读起来不像小说，更像犯罪记录。我们需要谈谈。</p>
+                <time>3月12日 23:30</time>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 检测特定条件显示编辑评论
+        if (document.referrer.includes('research') || 
+            new URLSearchParams(window.location.search).has('debug')) {
+            document.getElementById('editorComment').style.display = 'block';
+        }
+
+        // 控制台信息
+        console.log('%c第7章创作笔记', 'color: #8b0000;');
+        console.log('关键决策点：3月15日');
+        console.log('观察对象：李明');
+        console.log('心理状态：边界模糊');
+    </script>
+
+    <!-- 在 blog/perfect-crime-progress/chapter-7.html 末尾添加 -->
+    <script>
+    // 当用户阅读到特定部分时解锁线索
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    unlockClueFromPage('blog-cycle-47');
+                }
+            });
+        });
+    
+        // 观察隐藏的时间循环信息部分
+        const cycleInfo = document.getElementById('cycle-info');
+        if (cycleInfo) {
+            observer.observe(cycleInfo);
+        }
+    });
+</script>    
+</body>
+</html>

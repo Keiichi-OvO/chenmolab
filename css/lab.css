@@ -1,0 +1,84 @@
+.lab-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.experiment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.experiment-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.experiment-card.locked {
+    opacity: 0.6;
+    background: #f8f9fa;
+}
+
+.experiment-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.experiment-status::before {
+    content: '●';
+    margin-right: 0.5rem;
+}
+
+.experiment-card:not(.locked) .experiment-status {
+    background: #d4edda;
+    color: #155724;
+}
+
+.experiment-card.locked .experiment-status {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.experiment-data {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.data-point {
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.access-panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 2rem;
+    text-align: center;
+    display: none;
+}
+
+.password-hint {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}

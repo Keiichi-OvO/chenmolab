@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>线索追踪 - 陈默创作实验室</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detective.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">首页</a> > 线索追踪
+        </nav>
+
+        <header class="detective-header">
+            <h1>线索追踪系统</h1>
+            <p>收集到的证据与推理路径</p>
+        </header>
+
+        <div class="clue-dashboard">
+            <!-- 线索统计 -->
+            <div class="clue-stats">
+                <div class="stat-card">
+                    <h3>已发现线索</h3>
+                    <span class="stat-number" id="foundClues">0</span>
+                    <span class="stat-total">/ 23</span>
+                </div>
+                <div class="stat-card">
+                    <h3>解谜进度</h3>
+                    <span class="stat-number" id="puzzleProgress">0%</span>
+                </div>
+                <div class="stat-card">
+                    <h3>时间循环</h3>
+                    <span class="stat-number">47</span>
+                    <span class="stat-label">次</span>
+                </div>
+            </div>
+
+            <!-- 线索分类 -->
+            <div class="clue-categories">
+                <div class="category">
+                    <h3>📝 创作线索</h3>
+                    <ul class="clue-list">
+                        <li data-clue="blog-cycle-47" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            博客中的时间循环暗示
+                        </li>
+                        <li data-clue="writing-reality" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            现实与虚构的边界模糊
+                        </li>
+                        <li data-clue="chapter-7-breakdown" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            第7章的心理崩溃记录
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3>🔍 研究线索</h3>
+                    <ul class="clue-list">
+                        <li data-clue="time-loop-theory" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            时间循环理论研究
+                        </li>
+                        <li data-clue="criminal-psychology" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            犯罪心理学深度分析
+                        </li>
+                        <li data-clue="observation-records" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            实地观察记录
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3>⚗️ 实验线索</h3>
+                    <ul class="clue-list">
+                        <li data-clue="reality-immersion" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            现实沉浸实验
+                        </li>
+                        <li data-clue="psychological-testing" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            心理边界测试
+                        </li>
+                        <li data-clue="ethical-dilemmas" class="clue-item locked">
+                            <span class="clue-icon">🔒</span>
+                            道德困境实验
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 推理板 -->
+            <div class="deduction-board">
+                <h3>推理连接</h3>
+                <div class="connection-map" id="connectionMap">
+                    <!-- 通过JavaScript动态生成线索连接 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 进度提示 -->
+        <div class="progress-hints">
+            <h3>下一步探索建议</h3>
+            <ul id="nextSteps">
+                <li>仔细阅读博客中的创作笔记</li>
+                <li>查看研究资料的时间循环理论</li>
+                <li>探索写作实验室的实验记录</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/clue-tracker.js"></script>
+</body>
+</html>

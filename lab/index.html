@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>写作实验室 - 陈默创作实验室</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lab.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">首页</a> > 写作实验室
+        </nav>
+        
+        <header class="page-header">
+            <h1>写作实验室</h1>
+            <p>实验性的创作方法与技术探索</p>
+        </header>
+
+        <div class="lab-warning">
+            <p>⚠️ 警告：本区域包含实验性内容，某些方法可能涉及道德边界测试</p>
+        </div>
+
+        <div class="experiment-grid">
+            <div class="experiment-card">
+                <h3>现实沉浸实验</h3>
+                <p class="experiment-status">进行中</p>
+                <p>为了追求极致的真实感，深入观察现实生活中的各种场景...</p>
+                <a href="experiment-records/reality-immersion.html" class="experiment-link">查看实验记录</a>
+                
+                <div class="experiment-data">
+                    <span class="data-point">观察时长：47小时</span>
+                    <span class="data-point">数据收集：89%</span>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <h3>心理边界测试</h3>
+                <p class="experiment-status">准备中</p>
+                <p>探索创作者在艺术追求与道德约束之间的心理边界...</p>
+                <a href="experiment-records/psychological-boundaries.html" class="experiment-link">查看实验设计</a>
+            </div>
+
+            <div class="experiment-card locked">
+                <h3>时间循环模拟</h3>
+                <p class="experiment-status">已锁定</p>
+                <p>需要更高级别权限访问</p>
+                <button onclick="requestAccess('time-loop')">申请访问权限</button>
+            </div>
+        </div>
+
+        <!-- 密码输入区域 -->
+        <div class="access-panel" id="accessPanel">
+            <h4>实验室高级访问</h4>
+            <input type="password" id="labPassword" placeholder="输入访问密码">
+            <button onclick="checkLabPassword()">验证</button>
+            <p class="password-hint">提示：第一本书的出版年份</p>
+        </div>
+
+        <script>
+            function requestAccess(experiment) {
+                alert('需要密码才能访问' + experiment + '实验');
+                document.getElementById('accessPanel').style.display = 'block';
+            }
+
+            function checkLabPassword() {
+                const password = document.getElementById('labPassword').value;
+                if (password === '2020') { // 假设第一本书2020年出版
+                    window.location.href = 'secret/time-loop-simulation.html';
+                } else {
+                    alert('密码错误');
+                }
+            }
+
+            // 实验室特殊效果
+            console.log('%c写作实验室系统启动', 'color: #d2691e; font-weight: bold;');
+            console.log('当前实验数量：3');
+            console.log('高风险实验：1');
+        </script>
+    </div>
+</body>
+</html>
